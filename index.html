@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartPack - Design Urbain. Énergie Infinie.</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        accent: '#FFD700', // Electric Yellow
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-nav {
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        .hero-pattern {
+            background-color: #0f172a;
+            background-image: radial-gradient(#1e293b 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+    </style>
+</head>
+
+<body class="bg-slate-900 text-white font-sans antialiased selection:bg-accent selection:text-slate-900">
+
+    <!-- Sticky Navbar -->
+    <nav class="fixed w-full z-50 top-0 left-0 border-b border-white/10 glass-nav transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 cursor-pointer">
+                    <span class="text-2xl font-bold tracking-tighter text-white">Smart<span
+                            class="text-accent">Pack</span></span>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#features"
+                            class="hover:text-accent transition-colors px-3 py-2 rounded-md text-sm font-medium">Fonctionnalités</a>
+                        <a href="#reviews"
+                            class="hover:text-accent transition-colors px-3 py-2 rounded-md text-sm font-medium">Avis</a>
+                        <a href="#faq"
+                            class="hover:text-accent transition-colors px-3 py-2 rounded-md text-sm font-medium">FAQ</a>
+                    </div>
+                </div>
+
+                <!-- CTA -->
+                <div class="hidden md:block">
+                    <a href="#order"
+                        class="bg-accent hover:bg-yellow-300 text-slate-900 font-bold py-2.5 px-6 rounded-full transition-transform transform hover:scale-105 shadow-[0_0_15px_rgba(255,215,0,0.3)]">
+                        Commander
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="-mr-2 flex md:hidden">
+                    <button type="button"
+                        class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-slate-800 focus:outline-none"
+                        aria-controls="mobile-menu" aria-expanded="false">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center pt-20 hero-pattern overflow-hidden">
+        <!-- Radial Gradient Glow -->
+        <div
+            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-accent/5 rounded-full blur-3xl pointer-events-none">
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center relative z-10 w-full">
+
+            <!-- Text Content -->
+            <div class="md:w-1/2 text-center md:text-left mb-12 md:mb-0">
+                <div
+                    class="inline-block px-3 py-1 mb-6 text-xs font-semibold tracking-wider text-accent uppercase bg-accent/10 rounded-full border border-accent/20">
+                    Nouveau Lancement
+                </div>
+                <h1 class="text-5xl md:text-7xl font-bold leading-tight mb-6 tracking-tight">
+                    Design Urbain. <br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-400">Énergie
+                        Infinie.</span>
+                </h1>
+                <p class="text-lg md:text-xl text-gray-400 mb-8 max-w-lg mx-auto md:mx-0 leading-relaxed">
+                    Le premier sac à dos solaire qui ne ressemble pas à un gadget. Restez chargé, où que vous soyez,
+                    avec style.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                    <a href="#order"
+                        class="bg-accent hover:bg-yellow-300 text-slate-900 font-bold py-4 px-8 rounded-full text-lg transition-transform transform hover:scale-105 shadow-[0_0_20px_rgba(255,215,0,0.4)] flex items-center justify-center gap-2">
+                        Commander à -15%
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    <div class="flex items-center justify-center gap-2 text-sm text-gray-400 py-3">
+                        <i class="fa-solid fa-check text-green-400"></i> Stock Limité
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hero Image Placeholder -->
+            <div class="md:w-1/2 w-full relative">
+                <div
+                    class="aspect-[4/5] bg-slate-800 rounded-3xl border border-white/10 flex items-center justify-center relative shadow-2xl overflow-hidden group">
+                    <img src="hero-image.png" alt="SmartPack Lifestyle"
+                        class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent opacity-40">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof (Trust Bar) -->
+    <section class="py-10 border-y border-white/5 bg-slate-900/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-sm text-gray-500 uppercase tracking-widest mb-8">Vu sur & Approuvé par</p>
+            <div
+                class="flex flex-wrap justify-center items-center gap-12 md:gap-24 opacity-40 grayscale hover:grayscale-0 transition-all duration-500">
+                <div class="flex items-center gap-2 text-xl font-bold"><i class="fa-brands fa-instagram text-2xl"></i>
+                    Instagram</div>
+                <div class="flex items-center gap-2 text-xl font-bold"><i
+                        class="fa-solid fa-masks-theater text-2xl"></i> TechCrunch</div>
+                <div class="flex items-center gap-2 text-xl font-bold"><i class="fa-solid fa-bolt text-2xl"></i> Gizmodo
+                </div>
+                <div class="flex items-center gap-2 text-xl font-bold"><i class="fa-brands fa-apple text-2xl"></i> iLife
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem / Agitation -->
+    <section class="py-24 bg-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center gap-16">
+                <div class="md:w-1/2 order-2 md:order-1">
+                    <div
+                        class="aspect-square bg-slate-900 rounded-3xl border border-red-500/20 flex items-center justify-center relative overflow-hidden">
+                        <div class="text-center p-8">
+                            <i class="fa-solid fa-battery-empty text-7xl text-red-500 mb-6 animate-pulse"></i>
+                            <h3 class="text-2xl font-bold text-red-500 mb-2">1% Restant...</h3>
+                            <p class="text-gray-400">Le cauchemar de tout étudiant à 16h.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2 order-1 md:order-2">
+                    <h2 class="text-3xl md:text-5xl font-bold mb-6 leading-tight">La panique de la batterie faible,
+                        <span class="text-red-500 line-through decoration-4 decoration-white">c'est fini</span>.
+                    </h2>
+                    <p class="text-lg text-gray-300 mb-6 leading-relaxed">
+                        Vous êtes en ville, votre téléphone meurt, et vous n'avez nulle part où le brancher. Les
+                        batteries externes sont lourdes et souvent oubliées à la maison.
+                    </p>
+                    <p class="text-lg text-gray-300 mb-8 leading-relaxed">
+                        Le SmartPack intègre l'énergie directement dans votre quotidien. Pas de câbles encombrants,
+                        juste de l'énergie solaire pure et gratuite.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Showcase (Features) -->
+    <section id="features" class="py-24 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold mb-6">Technologie Invisible. <br>Performance Maximale.</h2>
+                <p class="text-gray-400 text-lg">Chaque détail du SmartPack a été pensé pour la vie urbaine moderne.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Feature 1 -->
+                <div
+                    class="bg-slate-800/50 p-8 rounded-2xl border border-white/5 hover:border-accent/30 transition-all hover:-translate-y-1">
+                    <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mb-6 text-accent">
+                        <i class="fa-solid fa-sun text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Panneau Solaire furtif</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Intégré sans couture. Haute efficacité même par
+                        temps nuageux.</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div
+                    class="bg-slate-800/50 p-8 rounded-2xl border border-white/5 hover:border-accent/30 transition-all hover:-translate-y-1">
+                    <div
+                        class="w-12 h-12 bg-blue-500/10 rounded-xl flex items-center justify-center mb-6 text-blue-400">
+                        <i class="fa-solid fa-droplet text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Tissu Déperlant</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Protège vos appareils contre la pluie et les
+                        éclaboussures urbaines.</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div
+                    class="bg-slate-800/50 p-8 rounded-2xl border border-white/5 hover:border-accent/30 transition-all hover:-translate-y-1">
+                    <div
+                        class="w-12 h-12 bg-green-500/10 rounded-xl flex items-center justify-center mb-6 text-green-400">
+                        <i class="fa-solid fa-bolt text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Port USB Discret</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Branchez votre téléphone à l'extérieur tout en
+                        gardant la batterie à l'intérieur.</p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div
+                    class="bg-slate-800/50 p-8 rounded-2xl border border-white/5 hover:border-accent/30 transition-all hover:-translate-y-1">
+                    <div
+                        class="w-12 h-12 bg-purple-500/10 rounded-xl flex items-center justify-center mb-6 text-purple-400">
+                        <i class="fa-solid fa-laptop text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Compartiment 15"</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Poche rembourrée dédiée pour protéger votre
+                        ordinateur portable.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- UGC / Social Media Section -->
+    <section id="reviews" class="py-24 bg-slate-800 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold mb-12 text-center">La communauté SmartPack</h2>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+                <!-- Video Placeholder 1 -->
+                <div
+                    class="aspect-[9/16] bg-slate-900 rounded-2xl border border-white/10 relative overflow-hidden group cursor-pointer">
+                    <img src="ugc-image-1.png" alt="Tiktok User Review"
+                        class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                    <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                        <div
+                            class="w-16 h-16 bg-white/20 rounded-full backdrop-blur-sm flex items-center justify-center opacity-80 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-play text-2xl text-white ml-1"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video Placeholder 2 -->
+                <!-- Video Placeholder 2 -->
+                <div
+                    class="aspect-[9/16] bg-slate-900 rounded-2xl border border-white/10 relative overflow-hidden group cursor-pointer">
+                    <img src="ugc-image-2.png" alt="Tech Review"
+                        class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                    <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                        <div
+                            class="w-16 h-16 bg-white/20 rounded-full backdrop-blur-sm flex items-center justify-center opacity-80 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-play text-2xl text-white ml-1"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video Placeholder 3 -->
+                <div
+                    class="aspect-[9/16] bg-slate-900 rounded-2xl border border-white/10 relative overflow-hidden group cursor-pointer sm:hidden md:block">
+                    <img src="ugc-image-3.png" alt="Tech Unboxing"
+                        class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                    <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                        <div
+                            class="w-16 h-16 bg-white/20 rounded-full backdrop-blur-sm flex items-center justify-center opacity-80 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-play text-2xl text-white ml-1"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Offer Section -->
+    <section id="order" class="py-24 relative">
+        <div class="absolute inset-0 bg-gradient-to-br from-accent/10 to-slate-900 pointer-events-none"></div>
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+
+            <div
+                class="bg-slate-800/80 backdrop-blur-xl border border-accent/20 rounded-3xl p-8 md:p-16 shadow-[0_0_50px_rgba(255,215,0,0.1)]">
+                <span
+                    class="inline-block bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-full mb-6 animate-bounce">OFFRE
+                    LIMITÉE</span>
+
+                <h2 class="text-3xl md:text-5xl font-bold mb-4">Rejoignez le mouvement.</h2>
+                <p class="text-gray-400 mb-8">Ne soyez plus jamais esclave d'une prise murale.</p>
+
+                <div class="flex items-baseline justify-center gap-4 mb-2">
+                    <span class="text-gray-500 text-2xl line-through font-medium">80€</span>
+                    <span class="text-6xl font-bold text-white">45€</span>
+                </div>
+                <p class="text-accent text-sm mb-8 font-medium">Prix de lancement spécial.</p>
+
+                <div class="w-full bg-slate-700 rounded-full h-2.5 mb-2 overflow-hidden">
+                    <div class="bg-accent h-2.5 rounded-full w-[85%]"></div>
+                </div>
+                <p class="text-xs text-gray-400 mb-10 text-right">Réservé aux 100 premières commandes (85 vendus)</p>
+
+                <button
+                    class="w-full md:w-auto bg-accent hover:bg-yellow-300 text-slate-900 font-bold py-5 px-12 rounded-full text-xl shadow-lg transition-transform transform hover:scale-105 active:scale-95">
+                    Commander SmartPack Maintenant
+                </button>
+
+                <div class="mt-8 flex items-center justify-center gap-6 text-sm text-gray-400">
+                    <span class="flex items-center gap-2"><i class="fa-solid fa-truck"></i> Livraison Gratuite</span>
+                    <span class="flex items-center gap-2"><i class="fa-solid fa-shield-halved"></i> Garantie 2
+                        ans</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="py-24 bg-slate-800/30">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold mb-12 text-center">Questions Fréquentes</h2>
+
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <details class="group bg-slate-800 rounded-xl border border-white/5 overflow-hidden">
+                    <summary
+                        class="flex items-center justify-between p-6 cursor-pointer text-lg font-medium hover:text-accent transition-colors">
+                        Est-ce que ça marche par temps nuageux ?
+                        <span class="text-gray-400 group-open:rotate-180 transition-transform"><i
+                                class="fa-solid fa-chevron-down"></i></span>
+                    </summary>
+                    <div class="px-6 pb-6 text-gray-400 leading-relaxed">
+                        Oui ! Nos panneaux solaires de nouvelle génération captent le spectre diffus de la lumière. La
+                        charge sera un peu plus lente qu'en plein soleil, mais elle continue de fonctionner.
+                    </div>
+                </details>
+
+                <!-- FAQ Item 2 -->
+                <details class="group bg-slate-800 rounded-xl border border-white/5 overflow-hidden">
+                    <summary
+                        class="flex items-center justify-between p-6 cursor-pointer text-lg font-medium hover:text-accent transition-colors">
+                        Est-ce que le sac est lourd ?
+                        <span class="text-gray-400 group-open:rotate-180 transition-transform"><i
+                                class="fa-solid fa-chevron-down"></i></span>
+                    </summary>
+                    <div class="px-6 pb-6 text-gray-400 leading-relaxed">
+                        Pas du tout. Le module solaire est flexible et ultra-léger. Le sac pèse environ 800g à vide, ce
+                        qui est comparable à un sac à dos standard de bonne qualité.
+                    </div>
+                </details>
+
+                <!-- FAQ Item 3 -->
+                <details class="group bg-slate-800 rounded-xl border border-white/5 overflow-hidden">
+                    <summary
+                        class="flex items-center justify-between p-6 cursor-pointer text-lg font-medium hover:text-accent transition-colors">
+                        Quelle est la garantie ?
+                        <span class="text-gray-400 group-open:rotate-180 transition-transform"><i
+                                class="fa-solid fa-chevron-down"></i></span>
+                    </summary>
+                    <div class="px-6 pb-6 text-gray-400 leading-relaxed">
+                        Nous offrons une garantie complète de 2 ans sur le sac et les composants électroniques. Si
+                        quelque chose ne va pas, on le remplace.
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-white/10 text-center md:text-left">
+        <div
+            class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-8">
+            <div>
+                <span class="text-2xl font-bold tracking-tighter text-white">Smart<span
+                        class="text-accent">Pack</span></span>
+                <p class="text-sm text-gray-500 mt-2">© 2025 SmartPack. Tous droits réservés.</p>
+            </div>
+
+            <div class="flex gap-6">
+                <a href="#"
+                    class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-accent hover:text-slate-900 transition-colors">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="#"
+                    class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-accent hover:text-slate-900 transition-colors">
+                    <i class="fa-brands fa-tiktok"></i>
+                </a>
+                <a href="#"
+                    class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-accent hover:text-slate-900 transition-colors">
+                    <i class="fa-regular fa-envelope"></i>
+                </a>
+            </div>
+
+            <div class="flex gap-6 text-sm text-gray-500">
+                <a href="#" class="hover:text-white transition-colors">Contact</a>
+                <a href="#" class="hover:text-white transition-colors">Mentions Légales</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
